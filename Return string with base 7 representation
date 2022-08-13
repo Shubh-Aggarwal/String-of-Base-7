@@ -1,0 +1,19 @@
+string convertToBase7(int num) {
+        //base condition
+        if(num==0){
+            return "0";
+        }
+        int y=num;
+        string s="";
+        if(num<0)
+            num = abs(num);
+        while(num>0){
+            s+=to_string(num%7);
+            num = num/7;
+        }
+        reverse(s.begin(),s.end());
+        if(y<0){
+          s = "-"+s;
+        }
+            return s;
+    }
